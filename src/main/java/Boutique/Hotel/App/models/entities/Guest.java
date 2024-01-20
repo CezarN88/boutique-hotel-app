@@ -24,6 +24,9 @@ public class Guest {
     @Column(name = "age")
     private int age;
 
+    @Column(name = "city")
+    private String city;
+
     @Column(name = "email")
     private String email;
 

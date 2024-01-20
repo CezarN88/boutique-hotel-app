@@ -63,8 +63,8 @@ public class GuestServiceImpl implements GuestService {
     }
 
     @Override
-    public List<GuestDTO> searchGuests(String firstName, Integer age, String email) {
-        List<Guest> guests = guestRepository.findByNameAndAgeAndEmail(firstName, age, email);
+    public List<GuestDTO> getFilteredGuests(Integer age, String city, String email) {
+        List<Guest> guests = guestRepository.findFilteredGuests(age, city, email);
 
         return guests.stream()
                 .map(guest -> modelMapper.map(guest, GuestDTO.class))

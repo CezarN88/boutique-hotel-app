@@ -17,6 +17,6 @@ public interface RoomService {
     RoomDTO updateRoom(Long roomId, RoomDTO roomDTO);
 
     void deleteRoom(Long roomId);
-    List<RoomDTO> searchRooms(Integer roomNumber, RoomType roomType, Double price);
+    List<RoomDTO> getFilteredRooms(Integer roomNumber, RoomType roomType, Double price);
     RoomDTO markRoomAsReserved(Long roomId, Guest guest);
 }

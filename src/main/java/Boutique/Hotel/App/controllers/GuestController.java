@@ -48,12 +48,12 @@ public class GuestController {
         return ResponseEntity.noContent().build();
     }
 
-    @GetMapping("/search")
-    public ResponseEntity<List<GuestDTO>> searchGuests(
-            @RequestParam(value = "firstName", required = false) String firstName,
+    @GetMapping("/filtered")
+    public ResponseEntity<List<GuestDTO>> getFilteredGuests(
             @RequestParam(value = "age", required = false) Integer age,
+            @RequestParam(value = "city", required = false) String city,
             @RequestParam(value = "email", required = false) String email) {
-        return ResponseEntity.ok(guestService.searchGuests(firstName, age, email));
+        return ResponseEntity.ok(guestService.getFilteredGuests(age, city, email));
     }
 
     @PostMapping("/{guestId}/reserveRoom/{roomId}")

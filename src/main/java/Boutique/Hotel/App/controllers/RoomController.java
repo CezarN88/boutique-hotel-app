@@ -46,11 +46,11 @@ public class RoomController {
         roomService.deleteRoom(roomId);
         return ResponseEntity.noContent().build();
     }
-    @GetMapping("/search")
-    public ResponseEntity<List<RoomDTO>> searchRooms(
+    @GetMapping("/filtered")
+    public ResponseEntity<List<RoomDTO>> getFilteredRooms(
             @RequestParam(value = "roomNumber", required = false) Integer roomNumber,
             @RequestParam(value = "roomType", required = false) RoomType roomType,
             @RequestParam(value = "price", required = false) Double price) {
-        return ResponseEntity.ok(roomService.searchRooms(roomNumber, roomType, price));
+        return ResponseEntity.ok(roomService.getFilteredRooms(roomNumber, roomType, price));
     }
 }
