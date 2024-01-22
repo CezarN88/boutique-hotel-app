@@ -2,6 +2,7 @@ package Boutique.Hotel.App.services.guest;
 
 import Boutique.Hotel.App.models.dtos.GuestDTO;
 import Boutique.Hotel.App.models.dtos.RoomDTO;
+import Boutique.Hotel.App.models.entities.Guest;
 
 import java.util.List;
 
