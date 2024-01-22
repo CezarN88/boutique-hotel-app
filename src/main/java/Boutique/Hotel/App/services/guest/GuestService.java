@@ -16,7 +16,7 @@ public interface GuestService {
 
     void deleteGuest(Long guestId);
 
-    List<GuestDTO> searchGuests(String firstName, Integer age, String email);
+    List<GuestDTO> getFilteredGuests(Integer age, String city, String email);
 
     RoomDTO reserveRoom(Long guestId, Long roomId);
 

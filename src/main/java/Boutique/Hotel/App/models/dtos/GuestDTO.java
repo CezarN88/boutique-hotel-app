@@ -22,6 +22,8 @@ public class GuestDTO {
     @Min(value = 0, message = "Age must not be less than 0")
     private int age;
 
+    private String city;
+
     @NotBlank(message = "Email must not be blank")
     @Email(message = "Invalid email format")
     private String email;

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface RoomRepository extends JpaRepository<Room, Long> {
+public interface RoomRepository extends JpaRepository<Room, Long>, FilterRoomRepository {
 
     List<Room> findByRoomNumberAndRoomTypeAndPrice(Integer roomNumber, RoomType roomType, Double price);
 }

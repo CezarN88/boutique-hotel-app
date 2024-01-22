@@ -62,8 +62,8 @@ public class RoomServiceImpl implements RoomService {
     }
 
     @Override
-    public List<RoomDTO> searchRooms(Integer roomNumber, RoomType roomType, Double price) {
-        List<Room> rooms = roomRepository.findByRoomNumberAndRoomTypeAndPrice(roomNumber, roomType, price);
+    public List<RoomDTO> getFilteredRooms(Integer roomNumber, RoomType roomType, Double price) {
+        List<Room> rooms = roomRepository.findFilteredRooms(roomNumber, roomType, price);
         return rooms.stream()
                 .map(room -> modelMapper.map(room, RoomDTO.class))
                 .toList();
