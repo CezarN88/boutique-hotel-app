@@ -11,5 +11,4 @@ import java.util.List;
 @Repository
 public interface GuestRepository extends JpaRepository<Guest, Long>, FilterGuestRepository{
 
-    List<Guest> findByNameAndAgeAndEmail(String firstName, Integer age, String email);
 }
